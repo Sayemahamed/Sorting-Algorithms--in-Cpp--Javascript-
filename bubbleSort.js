@@ -17,11 +17,9 @@ function bubbleSort(array, ascending = true) {
     }
   }
 }
-let array = [
-  1, 2, 3, 34, 5, 56, 7, 4, 0, 343, 2, 21, 1, 1, 23, 34, 9, -3, 986, 7, 53,
-];
+let array = [1,2,3,34,5,56,7,4,0,343,2,21,1,1,23,34,9,-3,986,7,53];
 console.log(array);
 bubbleSort(array);
 console.log(array);
-bubbleSort(array, false);
+bubbleSort(array,false);
 console.log(array);
