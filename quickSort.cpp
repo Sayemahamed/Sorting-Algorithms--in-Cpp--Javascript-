@@ -3,24 +3,8 @@ using namespace std;
 inline vector<long long>add(vector<long long>leftArray,long long pivot,vector<long long>rightArray){
     vector<long long>ans;
     leftArray.push_back(pivot);
-    while(leftArray.size()>0 and rightArray.size()>0){
-        if(leftArray[0]<rightArray[0]){
-            ans.push_back(leftArray[0]);
-            leftArray.erase(leftArray.begin());
-        }
-        else {
-            ans.push_back(rightArray[0]);
-            rightArray.erase(rightArray.begin());
-        }
-    }
-    while(!leftArray.empty()){
-        ans.push_back(leftArray[0]);
-        leftArray.erase(leftArray.begin());
-    }
-    while(!rightArray.empty()){
-        ans.push_back(rightArray[0]);
-        rightArray.erase(rightArray.begin());
-    }
+    for(auto&it:leftArray)ans.push_back(it);
+    for(auto&it:rightArray)ans.push_back(it);
     return ans;
 }
 vector<long long> quickSort(vector<long long>&array){
